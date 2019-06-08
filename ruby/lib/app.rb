@@ -1,11 +1,19 @@
 require_relative "number_pair"
 
-test = [1, 1, 2, 4, 4, 5, 5, 5, 6, 7, 9]
-test_3 = [-5, 0, 310, 15, 4, 4, 4, 10, -13, -2, -5, 0, 23, -300]
+input = [1, 1, 2, 4, 4, 5, 5, 5, 6, 7, 9]
 SUM = 10
 
-test_4 = [10, 14, 12, 100, 13, 20]
-test_4_expected = []
+case_1_answer = NumberPair.case_1(input, SUM)
+case_2_answer = NumberPair.case_2(input, SUM)
+case_3_answer = NumberPair.case_3(input, SUM)
 
-answer = NumberPair.case_2(test_4, SUM)
-binding.pry
+puts "Input array: #{input}"
+puts
+puts "Case 1 Answer:"
+puts "#{case_1_answer}"
+puts
+puts "Case 2 Answer:"
+puts "#{case_2_answer}"
+puts
+puts "Case 3 Answer:"
+puts "#{case_3_answer}"
