@@ -39,20 +39,6 @@ class NumberPair
     return pairs
   end
 
-  def self.case_1(arr, sum)
-    case_1_array = []
-
-    pairs = self.find_pairs(arr, sum)
-
-    case_1_array += pairs
-    reverse_pairs = pairs.reverse
-
-    reverse_pairs.each do |pair|
-      case_1_array << pair.reverse
-    end
-    case_1_array
-  end
-
   def self.find_unique_pairs(arr, sum)
     if !arr.is_a?(Array)
       return []
@@ -89,6 +75,43 @@ class NumberPair
     end
 
     return pairs.keys
-
   end
+
+  def self.case_1(arr, sum)
+    case_1_array = []
+
+    pairs = self.find_pairs(arr, sum)
+
+    case_1_array += pairs
+    reverse_pairs = pairs.reverse
+
+    reverse_pairs.each do |pair|
+      case_1_array << pair.reverse
+    end
+    case_1_array
+  end
+
+  def self.case_2(arr, sum)
+    case_2_array = []
+
+    unique_pairs_array = self.find_unique_pairs(arr, sum)
+      if unique_pairs_array.length > 0
+      case_2_array += unique_pairs_array
+
+      if unique_pairs_array[-1][0] == unique_pairs_array[-1][1]
+        unique_pairs_array.pop
+      end
+
+      unique_pairs_array.reverse.each do |pair|
+        case_2_array << pair.reverse
+      end
+    end
+
+    case_2_array
+  end
+
+  def self.case_3(arr, sum)
+    self.find_unique_pairs(arr, sum)
+  end
+
 end
