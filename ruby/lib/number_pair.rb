@@ -36,26 +36,6 @@ class NumberPair
       i+= 1
     end
 
-    # i = 0
-    # sorted_arr.each do |num|
-    #   if num > (sum / 2)
-    #     break
-    #   end
-    #
-    #   j = high_index
-    #   while j > i
-    #     current_sum = sorted_arr[i] + sorted_arr[j]
-    #
-    #     if current_sum == sum
-    #       pairs << [sorted_arr[i], sorted_arr[j]]
-    #     elsif current_sum < sum
-    #       break
-    #     end
-    #     j -= 1
-    #   end
-    #   i += 1
-    # end
-
     return pairs
   end
 
@@ -73,7 +53,7 @@ class NumberPair
     case_1_array
   end
 
-  def self.case_2(arr, sum)
+  def self.find_unique_pairs(arr, sum)
     if !arr.is_a?(Array)
       return []
     end
@@ -89,26 +69,23 @@ class NumberPair
     pairs = {}
     sorted_arr = sanitized_arr.sort
     high_index = (sorted_arr.length) -1
+
     i = 0
-    sorted_arr.each do |num|
-      if num > sum /2
-        break
-      end
+    j = high_index
 
+    while sorted_arr[i] <= sum/2 && i < sorted_arr.length - 1
       j = high_index
-      while j > i
-        current_sum = sorted_arr[i] + sorted_arr[j]
 
-        if current_sum == sum
+      while sorted_arr[i] + sorted_arr[j] >= 10 && i < j
+        if sorted_arr[i] + sorted_arr[j] > 10
+          high_index -= 1
+        elsif sorted_arr[i] + sorted_arr[j] == 10
           pairs[[sorted_arr[i], sorted_arr[j]]] = nil
-        elsif current_sum < sum
-          break
         end
-
         j -= 1
       end
 
-      i += 1
+      i+= 1
     end
 
     return pairs.keys
