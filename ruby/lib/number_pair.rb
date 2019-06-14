@@ -24,10 +24,10 @@ class NumberPair
     while sorted_arr[i] <= sum/2 && i < sorted_arr.length - 1
       j = high_index
 
-      while sorted_arr[i] + sorted_arr[j] >= 10 && i < j
-        if sorted_arr[i] + sorted_arr[j] > 10
+      while sorted_arr[i] + sorted_arr[j] >= sum && i < j
+        if sorted_arr[i] + sorted_arr[j] > sum
           high_index -= 1
-        elsif sorted_arr[i] + sorted_arr[j] == 10
+        elsif sorted_arr[i] + sorted_arr[j] == sum
           pairs << [sorted_arr[i], sorted_arr[j]]
         end
         j -= 1
@@ -62,10 +62,10 @@ class NumberPair
     while sorted_arr[i] <= sum/2 && i < sorted_arr.length - 1
       j = high_index
 
-      while sorted_arr[i] + sorted_arr[j] >= 10 && i < j
-        if sorted_arr[i] + sorted_arr[j] > 10
+      while sorted_arr[i] + sorted_arr[j] >= sum && i < j
+        if sorted_arr[i] + sorted_arr[j] > sum
           high_index -= 1
-        elsif sorted_arr[i] + sorted_arr[j] == 10
+        elsif sorted_arr[i] + sorted_arr[j] == sum
           pairs[[sorted_arr[i], sorted_arr[j]]] = nil
         end
         j -= 1
