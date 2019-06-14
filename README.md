@@ -13,6 +13,12 @@ If you want to input your own code, please set "input" in app.rb to be what you 
 
 The input should be an array of integers to get an interesting result. If the app is given a non array or an array with less than 2 items, an empty array is returned.
 
+###Java Version
+1. Clone the repository.
+2. Run the Main.java file.
+
+If you want to run a custom array of integers, change "sampleArray[]" in Main.java to the array of integers desired.
+
 ##The problem
 Please complete the following using the programming language of your choice (I'd prefer Java) and return your work to me within 24 hours.  Please be considerate of the running time of your algorithm to solve the problem.
 
