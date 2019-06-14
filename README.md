@@ -1,7 +1,7 @@
 # number-pair-challenge
 
-##How To Run
-###Ruby Version
+## How To Run
+### Ruby Version
 
 1. Clone repository
 2. Open terminal and set current directory to number-pair-challenge/ruby/
@@ -13,13 +13,13 @@ If you want to input your own code, please set "input" in app.rb to be what you 
 
 The input should be an array of integers to get an interesting result. If the app is given a non array or an array with less than 2 items, an empty array is returned.
 
-###Java Version
+### Java Version
 1. Clone the repository.
 2. Run the Main.java file.
 
 If you want to run a custom array of integers, change "sampleArray[]" in Main.java to the array of integers desired.
 
-##The problem
+## The problem
 Please complete the following using the programming language of your choice (I'd prefer Java) and return your work to me within 24 hours.  Please be considerate of the running time of your algorithm to solve the problem.
 
 Write a program that allows for an integer array to be passed in and will then output all of the pairs that sum up to 10.  Please provide a solution that allows for 1) output all pairs (includes duplicates and the reversed ordered pairs), 2) output unique pairs only once (removes the duplicates but includes the reversed ordered pairs), and 3) output the same combo pair only once (removes the reversed ordered pairs).
